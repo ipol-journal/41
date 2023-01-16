@@ -142,20 +142,19 @@ if not isGray:
 dataH = im0.histogram()
 value_max = max(dataH)
 
-
 #draw all the histograms using the same reference maximum
 im0 = histogram(im0, value_max=value_max)
 im0.save('input_0_hist.png')
 imI = histogram(imI, value_max=value_max)
 imI.save('output_normI_hist.png' )
-imdI = histogram(imI, value_max=value_max)
+imdI = histogram(imdI, value_max=value_max)
 imdI.save('output_darkI_hist.png' )
-impI = histogram(imI, value_max=value_max)
+impI = histogram(impI, value_max=value_max)
 impI.save('output_powerI_hist.png' )
 if not isGray:
-    impRGB = histogram(imI, value_max=value_max)
+    impRGB = histogram(imRGB, value_max=value_max)
     impRGB.save('output_normRGB_hist.png' )
-    imdRGB = histogram(imI, value_max=value_max)
+    imdRGB = histogram(imdRGB, value_max=value_max)
     imdRGB.save('output_darkRGB_hist.png' )
-    impRGB = histogram(imI, value_max=value_max)
+    impRGB = histogram(impRGB, value_max=value_max)
     impRGB.save('output_powerRGB_hist.png' )
