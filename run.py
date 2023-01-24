@@ -133,6 +133,8 @@ imI = PIL.Image.open('output_normI.png')
 imdI = PIL.Image.open('output_darkI.png')
 impI = PIL.Image.open('output_powerI.png')
 if not isGray:
+    with open('algo_info.txt', 'w') as file:
+        file.write("notisGray=1")
     imRGB = PIL.Image.open('output_normRGB.png')
     imdRGB = PIL.Image.open('output_darkRGB.png')
     impRGB = PIL.Image.open('output_powerRGB.png')
